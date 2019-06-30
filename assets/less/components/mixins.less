@@ -1,0 +1,28 @@
+.add-font(@font-url, @font-name, @weight: normal, @style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+  url('@{font-folder}@{font-url}.woff') format('woff'), // Pretty Modern Browsers 
+  url('@{font-folder}@{font-url}.ttf') format('truetype'); // Safari, Android, iOS  
+  font-weight: @weight;
+  font-style: @style;
+}
+
+.logo-icon(@icon, @width, @height) {
+  background-image: url('@{icon-folder}@{icon}');
+  background-position: top 50% left 50%;
+  background-repeat: no-repeat;
+  width: @width;
+  height: @height;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-icon(@icon, @width, @height) {
+  background-image: url('@{icon-folder}@{icon}');
+  background-repeat: no-repeat;
+  width: @width;
+  height: @height;
+}
+  
